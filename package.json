@@ -1,0 +1,33 @@
+{
+  "name": "axie-marketplace-monitor",
+  "version": "1.0.0",
+  "description": "monitor for axie infinity marketplace prices",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmsobral/axie-marketplace-monitor.git"
+  },
+  "keywords": [
+    "axie",
+    "infinity",
+    "marketplace",
+    "price",
+    "monitor"
+  ],
+  "author": "Vyn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vmsobral/axie-marketplace-monitor/issues"
+  },
+  "homepage": "https://github.com/vmsobral/axie-marketplace-monitor#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "luxon": "^2.0.2",
+    "mongodb": "^4.1.0",
+    "node-fetch": "^2.6.1"
+  }
+}

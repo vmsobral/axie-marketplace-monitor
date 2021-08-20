@@ -1,0 +1,22 @@
+version: '3'
+services:
+  axie:
+    hostname: axie-marketplace-monitor
+    image: axie-marketplace-monitor:latest
+    build:
+      context: .
+    restart: always
+    network_mode: host
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - ~/Axie/database:/data/db
+    ports:
+      - 27017:27017
+    restart: unless-stopped
