@@ -15,12 +15,12 @@ class Mongo {
 
   insertMany ({ db, collection }, jsonList) {
     return this.client
-    .db(db)
-    .collection(collection)
-    .insertMany(
-      jsonList.map(json => json),
-      { ordered: false }
-    )
+      .db(db)
+      .collection(collection)
+      .insertMany(
+        jsonList.map(json => json),
+        { ordered: false }
+      )
   }
 
   insertSalesHistory (salesHistory) {
@@ -28,7 +28,13 @@ class Mongo {
   }
 
   retrieveSalesHistory (query) {
-    return this.client.db('axie').collection('saleshistory').find(query).toArray()
+    return this.client.db('axie').collection('saleshistory')
+      .find(query)
+      .toArray()
+  }
+
+  insertAxiesListed (axiesListed) {
+    return this.insertMany({ db: 'axie', collection: 'axieslisted' }, axiesListed)
   }
 }
 

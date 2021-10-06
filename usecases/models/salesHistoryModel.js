@@ -25,7 +25,7 @@ module.exports = function (axiesSoldResponse) {
         partSpecGenes: part.specialGenes,
         partStage: part.stage
       })),
-      axieStats: axieSale.stats,
+      axieStats: axieSale.stats
     }
   })
 }
